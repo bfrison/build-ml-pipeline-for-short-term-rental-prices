@@ -6,28 +6,28 @@ entry_points:
     parameters:
 
       input_artifact:
-        description: ## ADD DESCRIPTION
+        description: Name of the data set to download
         type: string
 
       output_artifact:
-        description: ## ADD DESCRIPTION
+        description: Name of the cleaned data set
         type: string
 
       output_type:
-        description: ## ADD DESCRIPTION
+        description: Type of the cleaned data set. This will be used to categorize the artifact in the W&B
         type: string
 
       output_description:
-        description: ## ADD DESCRIPTION
+        description: A brief description of the output artifact
         type: string
 
       min_price:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Minimum price below which rows are considered outliers and dropped out
+        type: float
 
       max_price:
-        description: ## ADD DESCRIPTION
-        type: string
+        description: Maximum price above which rows are considered outliers and dropped out
+        type: float
 
 
     command: >-
