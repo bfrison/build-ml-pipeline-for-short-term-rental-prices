@@ -29,6 +29,8 @@ def go(args):
 
         logger.info("Cleaning data set")
         df_cleaned = df[df.price.between(args.min_price, args.max_price)].copy()
+        idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+        df_cleaned = df_cleaned[idx].copy()
         with tempfile.TemporaryDirectory() as tmp_dir:
             clean_path = os.path.join(tmp_dir, args.output_artifact)
             df_cleaned.to_csv(clean_path)
