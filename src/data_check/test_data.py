@@ -71,3 +71,15 @@ def test_price_range(data, min_price, max_price):
     Test that the prices are within the configured minimum and maximum values
     """
     assert data.price.between(min_price, max_price).all()
+
+def test_latitude_range(data, min_latitude, max_latitude):
+    """
+    Test that the latitudes are within the configured minimum and maximum values
+    """
+    assert data.latitude.between(min_latitude, max_latitude).all()
+
+def test_longitude_range(data, min_longitude, max_longitude):
+    """
+    Test that the longitudes are within the configured minimum and maximum values
+    """
+    assert data.longitude.between(min_longitude, max_longitude).all()

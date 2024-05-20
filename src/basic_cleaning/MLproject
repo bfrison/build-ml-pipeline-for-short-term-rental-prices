@@ -29,6 +29,23 @@ entry_points:
         description: Maximum price above which rows are considered outliers and dropped out
         type: float
 
+      min_latitude:
+        description: Minimum latitude below which rows are considered outliers and dropped out
+        type: float
+
+      max_latitude:
+        description: Maximum latitude above which rows are considered outliers and dropped out
+        type: float
+
+      min_longitude:
+        description: Minimum longitude below which rows are considered outliers and dropped out
+        type: float
+
+      max_longitude:
+        description: Maximum longitude above which rows are considered outliers and dropped out
+        type: float
+
 
     command: >-
-        python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price} 
+        python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}
+        --min_price {min_price}  --max_price {max_price} --min_latitude {min_latitude} --max_latitude {max_latitude} --min_longitude {min_longitude} --max_longitude {max_longitude}
